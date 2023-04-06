@@ -1,0 +1,584 @@
+<html>
+<head>
+<title>TestNG:  Test1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/2</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 28 16:19:38 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>1115 seconds (1115806 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PomExecution.PatientBookAppointmentToDoctorAppointment.configAC()'><b>configAC</b><br>Test class: PomExecution.PatientBookAppointmentToDoctorAppointment</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.GenericUtilities.BaseClass.configAC(BaseClass.java:80)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1070125817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1070125817'><pre>java.lang.NullPointerException
+	at com.GenericUtilities.BaseClass.configAC(BaseClass.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>PomExecution.PatientBookAppointmentToDoctorAppointment@6950e31</td></tr>
+<tr>
+<td title='PomExecution.PatientBookAppointmentToDoctorAppointment.configBC()'><b>configBC</b><br>Test class: PomExecution.PatientBookAppointmentToDoctorAppointment<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace622504281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace622504281'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>24</td>
+<td>PomExecution.PatientBookAppointmentToDoctorAppointment@6950e31</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PomExecution.LoginAsAdmin.loginAdmin()'><b>loginAdmin</b><br>Test class: PomExecution.LoginAsAdmin<br/>
+<a href="#Output-280298103" onClick='toggleBox("Output-280298103", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-280298103" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-280298103">
+loginAdmin----->Testscript execution started<br/>
+Login as Admin done<br/>
+loginAdmin-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>79</td>
+<td>PomExecution.LoginAsAdmin@7cbd213e</td></tr>
+<tr>
+<td title='PomExecution.PatientDelete.deletePatient()'><b>deletePatient</b><br>Test class: PomExecution.PatientDelete<br/>
+<a href="#Output-1237739171" onClick='toggleBox("Output-1237739171", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1237739171" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1237739171">
+deletePatient----->Testscript execution started<br/>
+Registration done<br/>
+Registration done<br/>
+deletePatient-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>96</td>
+<td>PomExecution.PatientDelete@3ecd23d9</td></tr>
+<tr>
+<td title='PomExecution.MedicalHistory.medicalHistory()'><b>medicalHistory</b><br>Test class: PomExecution.MedicalHistory<br/>
+<a href="#Output-1328311978" onClick='toggleBox("Output-1328311978", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1328311978" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1328311978">
+medicalHistory----->Testscript execution started<br/>
+User is able see their medical history<br/>
+medicalHistory-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>PomExecution.MedicalHistory@52f759d7</td></tr>
+<tr>
+<td title='PomExecution.SystemTesting.bookAppointmentPatient()'><b>bookAppointmentPatient</b><br>Test class: PomExecution.SystemTesting<br/>
+<a href="#Output-1274274328" onClick='toggleBox("Output-1274274328", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1274274328" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1274274328">
+bookAppointmentPatient----->Testscript execution started<br/>
+user appointment history is displayed with details<br/>
+bookAppointmentPatient-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>PomExecution.SystemTesting@b7dd107</td></tr>
+<tr>
+<td title='PomExecution.LoginAsPatient.login()'><b>login</b><br>Test class: PomExecution.LoginAsPatient<br/>
+<a href="#Output-1926365278" onClick='toggleBox("Output-1926365278", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1926365278" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1926365278">
+login----->Testscript execution started<br/>
+login-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>PomExecution.LoginAsPatient@192d3247</td></tr>
+<tr>
+<td title='PomExecution.ContactQuery.contactQuery()'><b>contactQuery</b><br>Test class: PomExecution.ContactQuery<br/>
+<a href="#Output-1349118500" onClick='toggleBox("Output-1349118500", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1349118500" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1349118500">
+contactQuery----->Testscript execution started<br/>
+Query send Successfully<br/>
+contactQuery-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>PomExecution.ContactQuery@569cfc36</td></tr>
+<tr>
+<td title='PomExecution.SystemTesting.adminLogin()'><b>adminLogin</b><br>Test class: PomExecution.SystemTesting<br/>
+<a href="#Output-1049690271" onClick='toggleBox("Output-1049690271", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1049690271" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1049690271">
+adminLogin----->Testscript execution started<br/>
+Pass<br/>
+adminLogin-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>PomExecution.SystemTesting@b7dd107</td></tr>
+<tr>
+<td title='PomExecution.PatientDelete.patientLogin()'><b>patientLogin</b><br>Test class: PomExecution.PatientDelete<br/>
+<a href="#Output-1542692451" onClick='toggleBox("Output-1542692451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1542692451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1542692451">
+patientLogin----->Testscript execution started<br/>
+Patient deleted suucessfully<br/>
+patientLogin-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>PomExecution.PatientDelete@3ecd23d9</td></tr>
+<tr>
+<td title='PomExecution.BookAppointmentPatient.bookAppointmenr()'><b>bookAppointmenr</b><br>Test class: PomExecution.BookAppointmentPatient<br/>
+<a href="#Output-1359253109" onClick='toggleBox("Output-1359253109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1359253109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1359253109">
+bookAppointmenr----->Testscript execution started<br/>
+Appointment Done<br/>
+bookAppointmenr-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>76</td>
+<td>PomExecution.BookAppointmentPatient@69b0fd6f</td></tr>
+<tr>
+<td title='PomExecution.LoginAsAdmin.loginPatient()'><b>loginPatient</b><br>Test class: PomExecution.LoginAsAdmin<br/>
+<a href="#Output-1666404706" onClick='toggleBox("Output-1666404706", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1666404706" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1666404706">
+loginPatient----->Testscript execution started<br/>
+Login as Patient<br/>
+loginPatient-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>PomExecution.LoginAsAdmin@7cbd213e</td></tr>
+<tr>
+<td title='PomExecution.RegistrationOfPatient.patientRegistration()'><b>patientRegistration</b><br>Test class: PomExecution.RegistrationOfPatient<br/>
+<a href="#Output-2072469429" onClick='toggleBox("Output-2072469429", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2072469429" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2072469429">
+patientRegistration----->Testscript execution started<br/>
+patientRegistration-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>PomExecution.RegistrationOfPatient@43bd930a</td></tr>
+<tr>
+<td title='PomExecution.SystemTesting.doctorLogin()'><b>doctorLogin</b><br>Test class: PomExecution.SystemTesting<br/>
+<a href="#Output-817058337" onClick='toggleBox("Output-817058337", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-817058337" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-817058337">
+doctorLogin----->Testscript execution started<br/>
+Appointment is there in doctor my appointment history<br/>
+doctorLogin-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>69</td>
+<td>PomExecution.SystemTesting@b7dd107</td></tr>
+<tr>
+<td title='PomExecution.PatientDelete.adminLogin()'><b>adminLogin</b><br>Test class: PomExecution.PatientDelete<br/>
+<a href="#Output-443491513" onClick='toggleBox("Output-443491513", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-443491513" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-443491513">
+adminLogin----->Testscript execution started<br/>
+Logout admin successfully after deleting<br/>
+adminLogin-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>75</td>
+<td>PomExecution.PatientDelete@3ecd23d9</td></tr>
+<tr>
+<td title='PomExecution.LoginAsDoctor.login()'><b>login</b><br>Test class: PomExecution.LoginAsDoctor<br/>
+<a href="#Output-638063344" onClick='toggleBox("Output-638063344", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-638063344" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-638063344">
+login----->Testscript execution started<br/>
+login-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>PomExecution.LoginAsDoctor@2db7a79b</td></tr>
+<tr>
+<td title='PomExecution.LoginAsAdmin.loginDoctor()'><b>loginDoctor</b><br>Test class: PomExecution.LoginAsAdmin<br/>
+<a href="#Output-887582748" onClick='toggleBox("Output-887582748", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-887582748" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-887582748">
+loginDoctor----->Testscript execution started<br/>
+Login as Doctor<br/>
+loginDoctor-----> Testscript execution successfull<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>PomExecution.LoginAsAdmin@7cbd213e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PomExecution.PatientBookAppointmentToDoctorAppointment.docLogin()'><b>docLogin</b><br>Test class: PomExecution.PatientBookAppointmentToDoctorAppointment<br/>
+<a href="#Output-1019303762" onClick='toggleBox("Output-1019303762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1019303762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1019303762">
+Testscript execution Skipped<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1019303762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1019303762'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>0</td>
+<td>PomExecution.PatientBookAppointmentToDoctorAppointment@6950e31</td></tr>
+<tr>
+<td title='PomExecution.PatientBookAppointmentToDoctorAppointment.patientLogin()'><b>patientLogin</b><br>Test class: PomExecution.PatientBookAppointmentToDoctorAppointment<br/>
+<a href="#Output-1360608785" onClick='toggleBox("Output-1360608785", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1360608785" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1360608785">
+Testscript execution Skipped<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1360608785", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1360608785'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-U8GE9MR&apos;, ip: &apos;192.168.183.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.GenericUtilities.BaseClass.configBC(BaseClass.java:44)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:27055/status] to be available after 20143 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>0</td>
+<td>PomExecution.PatientBookAppointmentToDoctorAppointment@6950e31</td></tr>
+</table><p>
+</body>
+</html>

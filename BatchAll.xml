@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Suite" parallel="tests">
+<listeners>
+<listener class-name="com.GenericUtilities.ListenerImplementation"></listener>
+</listeners>
+  <test thread-count="1" name="Test" parallel="tests" preserve-order="false"   >
+    <classes>
+      <class name="PomExecution.BookAppointmentPatient"/>
+      <class name="PomExecution.LoginAsDoctor"/>
+      <class name="PomExecution.PatientBookAppointmentToDoctorAppointment"/>
+      <class name="PomExecution.SystemTesting"/>
+      <class name="PomExecution.MedicalHistory"/>
+      <class name="PomExecution.LoginAsAdmin"/>
+      <class name="PomExecution.LoginAsPatient"/>
+      <class name="PomExecution.PatientDelete"/>
+      <class name="PomExecution.ContactQuery"/>
+      <class name="PomExecution.RegistrationOfPatient"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
